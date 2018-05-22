@@ -1,4 +1,4 @@
-package database;
+package com.example.sqlexample.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import database.model.Note;
+import com.example.sqlexample.database.model.Note;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Version
@@ -31,7 +31,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(Note.CREATE_TABLE);
     }
 
-    // Upgrading database
+    // Upgrading com.example.sqlexample.database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
@@ -43,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //inserting note
     public long insertNote(String note) {
-        // get writable database as we want to write data
+        // get writable com.example.sqlexample.database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -63,7 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Reading notes
     public Note getNote(long id) {
-        // get readable database as we are not inserting anything
+        // get readable com.example.sqlexample.database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(Note.TABLE_NAME,

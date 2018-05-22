@@ -1,4 +1,4 @@
-package utils;
+package com.example.sqlexample.utils;
 
 import android.content.Context;
 import android.content.res.Resources;

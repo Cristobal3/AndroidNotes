@@ -1,4 +1,4 @@
-package database.model;
+package com.example.sqlexample.database.model;
 
 public class Note {
     public static final String TABLE_NAME = "notes";
